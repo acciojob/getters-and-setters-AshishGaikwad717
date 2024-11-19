@@ -22,7 +22,13 @@ class Teacher extends Person {
     console.log(`${this.name} is teaching`);
   }
 }
+const student = new Student("John", 20);
+console.log(student.name); 
+student.study(); 
 
+const teacher = new Teacher("Ms. Smith", 35);
+console.log(teacher.name); 
+teacher.teach(); 
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
