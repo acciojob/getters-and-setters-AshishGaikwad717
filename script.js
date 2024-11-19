@@ -16,7 +16,7 @@ class Student extends Person {
     console.log(`${this.name} is studying`);
   }
 }
-
+const person=new Person("John",25);
 class Teacher extends Person {
 	teach() {
     console.log(`${this.name} is teaching`);
