@@ -1,34 +1,41 @@
-//complete this code
 class Person {
-	constructor(name,age){
-		this.name=name;
-		this.age=age;
-	} 
-}
- get name() {
-    return this.name;
+  constructor(name, age) {
+    this._name = name; // Use a private variable convention
+    this._age = age;
   }
+
+  // Getter for name
+  get name() {
+    return this._name;
+  }
+
+  // Setter for age
   set age(age) {
-    this.age = age;
+    this._age = age;
   }
+}
+
 class Student extends Person {
-	study() {
-    console.log(`${this.name} is studying`);
+  study() {
+    console.log(`${this.name} is studying`); // Use the getter for name
   }
 }
-const person=new Person("John",25);
+
 class Teacher extends Person {
-	teach() {
-    console.log(`${this.name} is teaching`);
+  teach() {
+    console.log(`${this.name} is teaching`); // Use the getter for name
   }
 }
+
+// Example usage
 const student = new Student("John", 20);
-console.log(student.name); 
-student.study(); 
+console.log(student.name); // Output: John
+student.study(); // Output: John is studying
 
 const teacher = new Teacher("Ms. Smith", 35);
-console.log(teacher.name); 
-teacher.teach(); 
+console.log(teacher.name); // Output: Ms. Smith
+teacher.teach(); // Output: Ms. Smith is teaching
+
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
